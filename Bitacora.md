@@ -14,7 +14,7 @@
 
 ## Etapa 1: Preparación del Ambiente
 
-### 1.1. Información de la instancia EC2
+### 1.1. Información de la aplicación
 
 ### 1.2. Verificación del despliegue
 
