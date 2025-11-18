@@ -77,7 +77,7 @@ Este laboratorio utiliza los siguientes componentes:
 
 El taller está organizado en etapas progresivas:
 
-### 🚀 [Etapa 1: Preparación del Ambiente](./1-preparacion_ambiente-noidp.md)
+### 🚀 [Etapa 1: Preparación del Ambiente](./1-preparacion_ambiente-idp.md)
 **Duración:** ~20-30 minutos
 
 Configuración del entorno de trabajo:
@@ -86,7 +86,7 @@ Configuración del entorno de trabajo:
 - Despliegue de la aplicación y stack de observabilidad
 - Verificación del ambiente
 
-➡️ **[Comenzar Etapa 1](./1-preparacion_ambiente-noidp.md)**
+➡️ **[Comenzar Etapa 1](./1-preparacion_ambiente-idp.md)**
 
 ---
 
@@ -167,7 +167,7 @@ A lo largo del taller, documentarás tu trabajo en la [**Bitácora del Laborator
 
 **¿Listo para comenzar?** 👇
 
-### ➡️ [**Comenzar con la Etapa 1: Preparación del Ambiente**](./1-preparacion_ambiente-noidp.md)
+### ➡️ [**Comenzar con la Etapa 1: Preparación del Ambiente**](./1-preparacion_ambiente-idp.md)
 
 ---
 

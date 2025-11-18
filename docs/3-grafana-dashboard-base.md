@@ -31,7 +31,11 @@ Construir un dashboard en Grafana que permita visualizar y analizar las métrica
 
 ### 1️⃣ Acceso a Grafana
 
-1. Ingresa a la interfaz web de Grafana `http://{Public-DNS}:3000`
+1. Ingresa a la interfaz web de Grafana, para esto, desde backstage busca la aplicación base que te entregó el profesor.  Allí encontrarás la url del servicio de Grafana, tal como se muestra en las siguientes imagenes
+![alt text](./resources/grafana-inicial/profesorstack.png)
+
+![alt text](./resources/grafana-inicial/grafanaurl.png)
+
 2. En el menú lateral, selecciona **“Dashboard”** y luego haz clic en **“new”**. Finalmente, haz clic en **"Add Visualization"**
 
 ![alt text](./resources/grafana-inicial/grafana1.png)
@@ -85,7 +89,7 @@ La métrica utilizada cuenta cuántas solicitudes han sido procesadas y PromQL c
 En **Code Mode**, escribe la siguiente consulta PromQL:
 
 ```promql
-sum by (uri) (rate(http_server_requests_seconds_count[1m]))
+sum by(uri) (rate(http_server_requests_seconds_count{applicationName="{nombre-de-tu-app}-monitoring"}[1m]))
 ```
 
 Si prefieres usar el Query Builder, selecciona:
@@ -94,6 +98,7 @@ Si prefieres usar el Query Builder, selecciona:
 Metric: http_server_requests_seconds_count
 Operation: Range functions -> Rate() con rango de 1m
 Aggregate: Aggregate functions -> sum + `By label` uri
+Filter: label applicationName  = "{nombre-de-tu-app}-monitoring"
 ```
 
 
@@ -149,7 +154,7 @@ Una latencia estable y baja indica buen rendimiento; picos pueden sugerir satura
 ### Query PromQL
 
 ```promql
-sum by(uri) (rate(http_server_requests_seconds_sum[1m])) / sum by(uri) (rate(http_server_requests_seconds_count[1m]))
+sum by(uri) (rate(http_server_requests_seconds_sum{applicationName="{nombre-de-tu-app}-monitoring"}[1m])) / sum by(uri) (rate(http_server_requests_seconds_count{applicationName="{nombre-de-tu-app}-monitoring"}[1m]))
 ```
 **Configuraciones recomendadas:**
 
@@ -235,9 +240,7 @@ Esta variable permitirá filtrar dinámicamente el nivel de logs visualizado des
 2. En el campo de consulta, escribe la siguiente **query LogQL**:
 
 ```logql
-{container_name="java-application"} 
-| regexp `(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - (?P<logger>[\w.$]+) - (?P<level>[A-Z]+) - (?P<msg>.*)` 
-| level =~ `$LogLevel`
+{app="juan-perez-o-app-monitoring"} | level =~ `$LogLevel`
 ```
 
 #### Interpretación de la consulta:**
