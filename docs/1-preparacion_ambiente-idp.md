@@ -60,9 +60,11 @@ No olvides añadir tu usuario de Github a la lista de colaboradores!
 
 ![alt text](./resources/provisioning/gitnotification.png)
 
+![alt text](./resources/provisioning/invitation.png)
+
 6. Una vez aceptes la invitación ya puedes clonar el repositorio y modificarlo según lo que el laboratorio te indica!
 
-7. Mientras tanto la aplicación se estará desplegando, podras encontrar el estado de la aplicación en home -> nombre de tu aplicación. En la sección de ArgoCD overview -> Sync status / Health Status, espera hasta que la aplicación aparezca en estado  `Synced` y `Healthy` esto puede tomar entre 3 y 5 minutos. 
+7. Mientras tanto, la aplicación se estará desplegando, podras encontrar el estado de la aplicación en `home` -> `nombre de tu aplicación`. En la sección de `ArgoCD overview` ->`Sync status / Health Status`, espera hasta que la aplicación aparezca en estado  `Synced` y `Healthy`, esto puede tomar entre 3 y 5 minutos. 
 
 ![alt text](./resources/provisioning/appstate.png)
 
@@ -72,7 +74,8 @@ No olvides añadir tu usuario de Github a la lista de colaboradores!
 
 
 9. Accede a la url de tu aplicación para verificar el despliegue. Ten en cuenta que es una aplicación sencilla por lo que no cuenta con certificados HTTPS, por esto es necesario omitir las validaciones del navegador.
-![alt text](./resources/provisioning/skipcert.png.png)
+
+![alt text](./resources/provisioning/skipcert.png)
 
 10. Al finalizar deberías encontrar algo como lo que se muestra en la siguiente imagen:
 ![alt text](./resources/provisioning/apiendpoint.png)
