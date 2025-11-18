@@ -81,7 +81,7 @@ Ambos modos producen el mismo resultado. Puedes cambiar entre ellos usando el bo
 
 #### 📘 Paso 3: Configuración de la consulta
 
-Este panel mostrará cuántas solicitudes procesa la aplicación por segundo, agrupadas por endpoint (`uri`).  
+Este panel mostrará cuántas solicitudes procesa tu aplicación por segundo, agrupadas por endpoint (`uri`).  
 Con esta visualización podrás identificar qué rutas se usan más, cómo varía la carga en el tiempo y si existen picos de tráfico que coincidan con aumentos en la latencia o errores.
 
 La métrica utilizada cuenta cuántas solicitudes han sido procesadas y PromQL convierte esos conteos acumulados en una tasa  (requests per second – RPS), usando la función `rate`. Para definir la consulta sigue los siguientes pasos:
@@ -149,7 +149,7 @@ Desde la vista de dashboard, usa la opción `Add` y luego la opción `Visualizat
 > **Título sugerido:** Latencia promedio de respuesta por endpoint(s)
 
 **Interpretación:** 
-Este panel muestra cuánto tarda la aplicación, en promedio, en responder a las solicitudes por cada endpoint.
+Este panel muestra cuánto tarda tu aplicación, en promedio, en responder a las solicitudes por cada endpoint.
 Una latencia estable y baja indica buen rendimiento; picos pueden sugerir saturación, procesamiento intensivo o problemas en la base de datos.
 ### Query PromQL
 
@@ -183,7 +183,7 @@ sum by(uri) (rate(http_server_requests_seconds_sum{applicationName="{nombre-de-t
 > **Título sugerido:** Tasa de errores de aplicación (HTTP 4xx / 5xx)
 
 **Propósito:**
-Visualizar la frecuencia de errores que ocurren en la aplicación, diferenciando entre:
+Visualizar la frecuencia de errores que ocurren en tu aplicación, diferenciando entre:
 - **Errores 4xx:** solicitudes inválidas o mal formadas (fallos del cliente).
 - **Errores 5xx:** fallos internos del servidor o la lógica de negocio.
 
@@ -191,8 +191,7 @@ Este panel permitirá  detectar momentos en los que la aplicación falla y relac
 
 **Query PromQL:**
 ```promql
-sum by (status,uri) ( rate(http_server_requests_seconds_count{status=~"4..|5.."}[1m])
-)
+sum by(status, uri) (rate(http_server_requests_seconds_count{status=~"4..|5..", app="{nombre-de-tu-app}-monitoring"}[1m]))
 ```
 
 **Otros ajustes:**
@@ -211,7 +210,7 @@ Aplica los ajustes de visualización que consideres necesarios
 > **Título sugerido:** Explorador de logs
 
 **Propósito:**
-Observar los **logs generados por la aplicación Java** en tiempo real, filtrarlos por nivel de severidad (`INFO`, `WARN`, `ERROR`) y relacionarlos con las métricas vistas en los paneles anteriores.
+Observar los **logs generados por la aplicación Java** en tiempo real, filtrarlos por nivel de severidad (`info`, `warn`, `error`) y relacionarlos con las métricas vistas en los paneles anteriores.
 
 ![alt text](./resources/grafana-inicial/log-panel.png)
 
@@ -225,7 +224,7 @@ Observar los **logs generados por la aplicación Java** en tiempo real, filtrarl
 | **Name** | `LogLevel` |
 | **Label** | `LogLevel` |
 | **Type** | `Custom` |
-| **Values separated by commas** | `INFO, WARN, ERROR` |
+| **Values separated by commas** | `info, warn, error` |
 | **Include All option** | ✅ Activado |
 | **Multi-value** | ✅ Activado |
 
@@ -234,20 +233,19 @@ Observar los **logs generados por la aplicación Java** en tiempo real, filtrarl
 Esta variable permitirá filtrar dinámicamente el nivel de logs visualizado desde un menú desplegable en la parte superior del dashboard.
 
 ![alt text](./resources/grafana-inicial/loglevelvar.png)
+
 #### 📘 Paso 2: Crear el panel de logs
 
 1. Desde el dashboard, selecciona **“Add panel”** y elige la fuente de datos `Loki`.
 2. En el campo de consulta, escribe la siguiente **query LogQL**:
 
 ```logql
-{app="juan-perez-o-app-monitoring"} | level =~ `$LogLevel`
+{app="{nombre-de-tu-app}-monitoring"} | level =~ `$LogLevel`
 ```
 
 #### Interpretación de la consulta:**
 
-Muestra todos los logs generados por el contenedor java-application,
-extrayendo la fecha, el logger, el nivel de severidad y el mensaje de cada línea,
-y filtrando dinámicamente según el nivel seleccionado en $LogLevel.
+Muestra todos los logs generados por el contenedor tu aplicacion, filtrando dinámicamente según el nivel seleccionado en $LogLevel.
 
 
 

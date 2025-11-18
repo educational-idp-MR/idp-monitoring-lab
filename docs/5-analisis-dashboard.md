@@ -61,7 +61,7 @@ Mientras realizas experimentos con la aplicación, analiza cómo reaccionan los 
 
 #### 📝 2.4. Logs
 Con el panel de logs basado en Loki:
-- Filtra por nivel (`INFO`, `WARN`, `ERROR`).  
+- Filtra por nivel (`info`, `warn`, `error`).  
 - ¿Se observan mensajes repetitivos?  
 - ¿Los logs te ayudan a interpretar picos o caídas en las métricas?
 
@@ -119,7 +119,7 @@ Documenta brevemente en tu bitacora los ajustes que realizaste.
 *Aplica el método científico → observar, formular hipótesis, intervenir y volver a observar.*
 
 #### 🚀 5.2. Despliega la Aplicación Nuevamente  
-Compila, ejecuta y genera tráfico otra vez hacia el endpoint. (Revisa la seccion 1 - Preparación del ambiente)
+Despliega nuevamente la aplicación y genera nuevo tráfico  hacia el endpoint. (Revisa la seccion 2.2 - sobre como desplegar automáticamente la aplicación)
 
 #### 👀 5.3. Observa Cómo Cambia la Métrica  
 - ¿El ajuste surtió efecto?   

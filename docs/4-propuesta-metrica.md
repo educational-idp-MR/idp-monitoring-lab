@@ -77,9 +77,16 @@ Instrucciones generales:
 3. Ubica la llamada al método `.increment()`, `.record()`, o equivalente **exactamente en el lugar del flujo lógico donde tu métrica tiene sentido**.  
 4. Usa etiquetas si consideras que aportan valor (optional).
 
-Cuando termines, reinicia la aplicación   y verifica que tu métrica aparece en: `http://localhost:8080/actuator/prometheus`. Incluye una captura de pantalla de la métrica en tu bitácora.
+Cuando termines, despliegua la aplicación. Para esto debes:
+1. Subir tus cambios a github
+2.  crear un tag con el siguiente formato `release-0.0.{version}`  inicialmente la aplicacion es desplegada usando la version 0.0.0, cada vez que necesites hacer un despliegue debes crear un tag incrementando el ultimo número de la versión, por ejemplo `release-0.0.1` para la primera vez.
 
+![alt text](./resources/metrica-propia/release-0.png)
+![alt text](./resources/metrica-propia/release-1.png)
+![alt text](./resources/metrica-propia/release-2.png)
+![alt text](./resources/metrica-propia/release-3.png)
 
+La creación del tag activará el proceso de despliegue, debes estar atento en backstage a cuanto se actualice el tiempo de sincronización (pase a ser reciente) y esté nuevamente en estado   `Synced` y `Healthy`, verifica que tu métrica aparece en: `http://{app-DNS}/actuator/prometheus`. Incluye una captura de pantalla de la métrica en tu bitácora.
 
 ---
 
