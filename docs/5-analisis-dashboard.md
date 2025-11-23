@@ -73,7 +73,8 @@ Documenta brevemente en tu bitacora:
 
 - ¿Cómo describirías la anomalía?
 - ¿Qué paneles te ayudaron a identificar la anomalía?  
-- ¿Cual podria ser la causa de la anomalía? <--- Intenta adivinar la causa, no es necesario que sea correcta.
+- ¿Cual podria ush
+ser la causa de la anomalía? <--- Intenta adivinar la causa, no es necesario que sea correcta.
 - Añade una captura de pantalla del dashboard mostrando la anomalía
 
 ---
