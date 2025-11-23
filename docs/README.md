@@ -42,34 +42,25 @@ Al finalizar este laboratorio, serás capaz de:
 
 ## 🏗️ Arquitectura Utilizada
 
-Este laboratorio utiliza los siguientes componentes:
+Este laboratorio utiliza los siguientes componentes desplegados en un cluster de kubernetes:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        AWS EC2 Instance                      │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │                    Docker Compose                    │   │
-│  │                                                      │   │
-│  │  ┌──────────────┐  ┌──────────────┐                │   │
-│  │  │   Java App   │  │  Prometheus  │                │   │
-│  │  │ (Spring Boot)│◄─┤  (Métricas)  │                │   │
-│  │  └──────┬───────┘  └──────────────┘                │   │
-│  │         │                                           │   │
-│  │         ▼                                           │   │
-│  │  ┌──────────────┐  ┌──────────────┐                │   │
-│  │  │     Loki     │  │   Grafana    │                │   │
-│  │  │    (Logs)    │◄─┤ (Visualización)               │   │
-│  │  └──────────────┘  └──────────────┘                │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+![alt text](./resources/arquitectura.png)
+
+Cada estudiante dispone de una aplicación Java, que ya está configurada para exponer métricas mediante el endpoint `actuator/prometheus`. Esta aplicación ya cuenta con las configuraciones necesarias para ser desplegada en Kubernetes. 
+
+Adicionalmente, el profesor del laboratorio disponibiliza 3 componentes: 
+1. Loki se encarga de la recolección y almacenamiento de logs de las aplicaciones de los estudiantes
+2. Prometheus se encarga de la recolección y almacenamiento de métricas de las aplicaciones de los estudiantes
+3. Grafana se integra con Loki y Prometheus para permitir la creación de visualizaciones a partir de los datos almacenados. 
+
+Tanto Grafana como las aplicaciones de los estudiantes pueden accederse mediante un balanceador de carga que distribuye las peticiones a las aplicaciones correspondientes según el subdominio asignado.
 
 **Stack Tecnológico:**
 - 🚀 **Aplicación:** Java Spring Boot (URL Shortener)
 - 📊 **Métricas:** Prometheus + Spring Boot Actuator
 - 📝 **Logs:** Loki + Promtail
 - 📈 **Visualización:** Grafana
-- ☁️ **Infraestructura:** AWS EC2 + Docker Compose
+- ☁️ **Infraestructura:** Kubernetes (AWS EKS) + ArgoCD + Github Actions
 
 ---
 
