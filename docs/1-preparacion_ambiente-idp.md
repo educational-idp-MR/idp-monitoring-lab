@@ -80,12 +80,29 @@ No olvides añadir tu usuario de Github a la lista de colaboradores!
 10. Al finalizar deberías encontrar algo como lo que se muestra en la siguiente imagen:
 ![alt text](./resources/provisioning/apiendpoint.png)
 
+---
+
+## 🔧 Configuración de Observabilidad Incluida
+
+La aplicación que acabas de desplegar viene preconfigurada con las integraciones necesarias para exponer métricas y logs. Estas configuraciones se encuentran en el archivo `application.properties`.
+
+### Propiedades Configuradas:
+
+![Configuración de Spring Boot](./resources/configuracion-java/configuracion-spring.png)
+
+> **💡 Nota importante:** Estas configuraciones ya vienen incluidas en el template, por lo que no necesitas modificarlas. Sin embargo, es importante que entiendas qué hacen, ya que son la base para todo el monitoreo que implementarás en las siguientes etapas.
 
 ---
 
 ## ✅ Verificación del Ambiente
 
 Si llegaste hasta aquí y puedes ver la aplicación corriendo en tu navegador, **¡felicidades!** Has completado exitosamente la preparación del ambiente.
+
+### En esta etapa creaste: 
+
+1. Un repositorio en github con una aplicación Java configurada para exponer métricas y logs.
+2. Configuracion necesaria para integrar la aplicación con el stack de observabilidad de tu profesor.
+3. Un despliegue de la aplicación en kubernetes.
 
 > **💡 Consejo:** Guarda el DNS de tu aplicación, lo necesitarás durante todo el laboratorio.
 
