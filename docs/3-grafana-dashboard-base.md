@@ -314,7 +314,7 @@ Para cada una, define: (No olvides agregarlo a tu bitácora)
 **Asegúrate de haber completado:**
 - ☑️ Dashboard con 4 paneles base (solicitudes, latencia, errores, logs)
 - ☑️ Al menos 2 visualizaciones adicionales
-- ☑️ Documentación completa en tu [bitácora](../Bitacora.md)
+- ☑️ Documentación completa en tu bitácora
 - ☑️ Capturas de pantalla de todos los paneles
 
 > **💡 Tip:** Un buen dashboard cuenta una historia sobre el comportamiento de tu sistema.
