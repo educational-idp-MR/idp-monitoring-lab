@@ -23,7 +23,7 @@
 
 > **Paso 1:**   Acceso a backstage
 
-1. Accede a la siguiente url: https://backstage.eci-idp.click/
+1. Accede a la siguiente url: [backstage.eci-idp.click](https://backstage.eci-idp.click/)
 2. Selecciona la opción `Sign In` y posteriormente `Register`
 ![alt text](./resources/provisioning/register.png)
 3. Registrate usando usuario, contraseña y correo, utiliza tu usuario de enlace para identificarte, ejemplo `juan.perez-p`. 
@@ -106,7 +106,7 @@ Si llegaste hasta aquí y puedes ver la aplicación corriendo en tu navegador, *
 
 > **💡 Consejo:** Guarda el DNS de tu aplicación, lo necesitarás durante todo el laboratorio.
 
-**Registra en tu [bitácora](../Bitacora.md):**
+**Registra en tu bitácora (la puedes encontrar en la ruta /docs/Bitacora.md de tu repositorio):**
 - ✍️ DNS de aplicación
 - 📸 Captura de pantalla de la aplicación funcionando
 - 📝 Cualquier problema encontrado y cómo lo resolviste
