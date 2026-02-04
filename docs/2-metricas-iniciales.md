@@ -107,7 +107,7 @@ En la imagen se resaltan los distintos elementos que expone prometheus sobre cad
 - ☑️ Generado tráfico hacia todos los endpoints de la API
 - ☑️ Accedido al endpoint `/actuator/prometheus`
 - ☑️ Identificado al menos 3 métricas relevantes
-- ☑️ Documentado el análisis en tu [bitácora](../Bitacora.md)
+- ☑️ Documentado el análisis en tu bitácora
 
 > **💡 Tip:** Las métricas que selecciones te servirán para crear visualizaciones en la siguiente etapa.
 
