@@ -255,8 +255,6 @@ Muestra todos los logs generados por el contenedor tu aplicacion, filtrando din�
 
 **Opciones recomendadas:**
 
-* Activar “Show context” (para ver líneas antes y después del evento).
-
 * Activar “Wrap lines” (para leer mensajes largos).
 
 * Ordenar por timestamp descendente.
