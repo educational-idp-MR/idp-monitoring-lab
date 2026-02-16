@@ -29,7 +29,7 @@ Esta métrica no debe ser una copia de las existentes, sino una métrica que **t
 
 ## 📋 Construcción de tu Métrica Personalizada
 
-### 1️⃣ Revisa la Funcionalidad de la Aplicación
+### 2.2.1 Revisa la Funcionalidad de la Aplicación
 
 Dentro del proyecto, encontrarás la clase: `UrlShortenerService (paquete com.telemetry.urlshortener.service)`
 
@@ -45,13 +45,13 @@ Tu tarea será analizar esta clase para identificar un comportamiento que no est
 
 ---
 
-### 2️⃣ Identifica un Comportamiento Relevante para Medir
+### 2.2.2 Identifica un Comportamiento Relevante para Medir
 
 Observa cómo funciona el servicio y piensa:
 
 **¿Qué evento importante ocurre dentro de la aplicación que aún no está siendo medido?**
 
-Una vez hayas elegido un comportamiento interesante, documenta:
+Una vez hayas elegido un comportamiento interesante, documenta en tu bitácora:
 
 1. **Nombre de la métrica.**  
 2. **Qué tipo de métrica sería apropiada**  
@@ -59,14 +59,10 @@ Una vez hayas elegido un comportamiento interesante, documenta:
    - *Gauge* si mide estados
 3. **Qué comportamiento mide.**  
 4. **Por qué es relevante para el sistema.**  
-5. **En qué punto del servicio tendría sentido capturarla**  
-   (por ejemplo: durante la creación de URLs, durante los accesos, etc.)  
-
-> Escribe esta propuesta en tu bitácora del laboratorio.
 
 ---
 
-### 3️⃣ Implementa la Métrica en el Código
+### 2.2.3 Implementa la Métrica en el Código
 
 > Debes instrumentar tu métrica dentro de `UrlShortenerService`, siguiendo el patrón del `dummyCounter` ya existente.
 
@@ -86,11 +82,10 @@ Cuando termines, despliegua la aplicación. Para esto debes:
 ![alt text](./resources/metrica-propia/release-2.png)
 ![alt text](./resources/metrica-propia/release-3.png)
 
-La creación del tag activará el proceso de despliegue, debes estar atento en backstage a cuanto se actualice el tiempo de sincronización (pase a ser reciente) y esté nuevamente en estado   `Synced` y `Healthy`, verifica que tu métrica aparece en: `http://{app-DNS}/actuator/prometheus`. Incluye una captura de pantalla de la métrica en tu bitácora.
-
+La creación del tag activará el proceso de despliegue, debes estar atento en backstage a cuanto se actualice el tiempo de sincronización (pase a ser reciente) y esté nuevamente en estado   `Synced` y `Healthy`, verifica que tu métrica aparece en: `http://{app-DNS}/actuator/prometheus`.
 ---
 
-### 4️⃣ Define Cómo la Visualizarías en Grafana
+### 2.2.4 Define Cómo la Visualizarías en Grafana
 
 Una vez tengas la métrica, debes pensar cómo se visualizaría.
 
@@ -107,12 +102,12 @@ Una vez tengas la métrica, debes pensar cómo se visualizaría.
    para el comportamiento que quieres visualizar.  
    
 
-3. **¿Qué información esperas ver en ese panel?**
+3. **¿Cuál es el propósito de la visualización?**
 Provee una interpretación en palabras con el propósito de la visualización
 
 ---
 
-### 5️⃣ Agrega el Panel a tu Dashboard
+### 2.2.5 Agrega el Panel a tu Dashboard
 
 Usando la métrica , crea **un panel** en Grafana que represente la nueva visualización.
 
@@ -141,7 +136,6 @@ Incluye una captura de pantalla del panel en tu bitácora.
 - ☑️ Implementación de la métrica en el código Java
 - ☑️ Verificación en el endpoint `/actuator/prometheus`
 - ☑️ Panel creado en Grafana con tu métrica
-- ☑️ Capturas de pantalla de todo el proceso
 
 > **💡 Reflexión:** Las métricas de dominio son más valiosas que las métricas técnicas genéricas, porque reflejan el comportamiento específico de tu negocio.
 

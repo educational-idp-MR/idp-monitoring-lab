@@ -101,6 +101,12 @@ Aggregate: Aggregate functions -> sum + `By label` uri
 Filter: label applicationName  = "{nombre-de-tu-app}-monitoring"
 ```
 
+Ejemplo:
+
+```promql
+sum by(uri) (rate(http_server_requests_seconds_count{applicationName="juan-perez-p-app-monitoring"}[1m]))
+```
+
 
 #### 📘 Paso 4: Configurar la visualización
 
@@ -296,13 +302,12 @@ Para cada una, define: (No olvides agregarlo a tu bitácora)
 
 - Explora las métricas disponibles en `actuator/prometheus`, adicionalmente puedes proponer nuevas visualizaciones de las métricas que ya se han utilizado si las consideras relevantes para monitorear la aplicación. 
 - Si usas **Loki**, puedes aplicar expresiones regulares y filtros para contar, agrupar o visualizar logs específicos (por ejemplo, errores, advertencias o mensajes informativos).  
-- Usa el **modo Builder** si prefieres construir consultas desde menús, o el **modo Code** para escribir las expresiones directamente.  Si deseas, apoyate de modelos LLM para generar las consultas a partir del propósito previamente definido.
+- Usa el **modo Builder** si prefieres construir consultas desde menús, o el **modo Code** para escribir las expresiones directamente.  Si deseas, **apoyate de modelos LLM para generar las consultas a partir del propósito previamente definido**.
 - Ajusta los **colores y unidades** para que los datos sean fáciles de leer (por ejemplo, convertir bytes a MB o segundos a milisegundos).  
 - Prueba diferentes **tipos de panel** hasta encontrar la visualización que mejor comunique el comportamiento observado.  
 
 ### 📝 Análisis Final (Bitácora)
 
-- ¿Qué indicadores te parecerían útiles para detectar fallos antes de que afecten a los usuarios?  
 - ¿Qué otros datos te gustaría visualizar si tuvieras más información disponible?
 
 ---

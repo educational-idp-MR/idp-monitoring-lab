@@ -93,7 +93,7 @@ En la imagen se resaltan los distintos elementos que expone prometheus sobre cad
 
 3. En tu bitácora de laboratorio:
 
-   - Selecciona tres métricas relevantes y describe qué información aportan sobre el sistema.
+   - Selecciona dos métricas relevantes y describe qué información aportan sobre el sistema.
      - Menciona qué tipo de métrica es (gauge, counter, histograma, summary)
      - Con qué otras métricas podría estar relacionada (si aplica)? Por ejemplo, un aumento en peticiones podría influir en el uso de CPU
      - En qué escenarios puede ayudar esta métrica?
@@ -106,7 +106,7 @@ En la imagen se resaltan los distintos elementos que expone prometheus sobre cad
 **Asegúrate de haber completado:**
 - ☑️ Generado tráfico hacia todos los endpoints de la API
 - ☑️ Accedido al endpoint `/actuator/prometheus`
-- ☑️ Identificado al menos 3 métricas relevantes
+- ☑️ Identificado al menos 2 métricas relevantes
 - ☑️ Documentado el análisis en tu bitácora
 
 > **💡 Tip:** Las métricas que selecciones te servirán para crear visualizaciones en la siguiente etapa.

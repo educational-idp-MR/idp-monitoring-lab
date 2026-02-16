@@ -82,21 +82,12 @@ Ajusta el rango de tiempo para observar con más detalle (últimos 5 minutos, 15
 
 ### 4️⃣ Detección de Anomalías y Puntos de Interés
 
-Durante tu experimentación, presta atención a:
-
-- Picos de latencia inesperados  
-- Tiempos de respuesta inconsistentes  
-- Errores HTTP en momentos específicos  
-- Repentinas caídas o aumentos de tráfico  
-- Logs con mensajes atípicos o en cantidades inusuales  
-- Endpoints cuyos valores no cambian como esperarías  
-
 Documenta brevemente en tu bitacora:
 
-- ¿Qué valores te parecen extraños?  
-- ¿Qué panel te alertó primero?  
 - ¿Cómo describirías la anomalía?
+- ¿Qué paneles te ayudaron a identificar la anomalía?  
 - ¿Cual podria ser la causa de la anomalía? <--- Intenta adivinar la causa, no es necesario que sea correcta.
+- Añade una captura de pantalla del dashboard mostrando la anomalía
 
 ---
 
@@ -142,20 +133,6 @@ En tu bitácora del laboratorio documenta una breve **Reflexión final:**
 
 En esta etapa has utilizado métricas y logs como herramientas fundamentales para comprender el comportamiento de un sistema en ejecución.  
 También aplicaste un proceso iterativo de análisis y corrección, muy similar al que se usa en entornos reales de observabilidad, donde los dashboards son clave para detectar problemas y validar mejoras.
-
----
-
-## ✅ Verificación Final
-
-**Asegúrate de haber completado:**
-- ☑️ Generación de tráfico variado hacia la aplicación
-- ☑️ Identificación de anomalías en el dashboard
-- ☑️ Análisis de correlaciones entre métricas y logs
-- ☑️ Modificación del código para corregir anomalías
-- ☑️ Validación de mejoras con métricas
-- ☑️ Documentación completa en tu bitácora
-- ☑️ Capturas de pantalla del antes y después
-- ☑️ Reflexión final sobre las lecciones aprendidas
 
 ---
 
@@ -208,10 +185,10 @@ No necesitas explicaciones profundas — basta con registrar qué observaste y p
 
 <div class="finish-stage-container">
   <button id="finish-stage-btn" class="finish-stage-btn" data-next-url="">
-    🏆 Finalizar Laboratorio ✅
+    🏆 Finalizar Laboratorio✅
   </button>
   <p class="finish-stage-info">
-    💾 Al hacer clic, tu tiempo será guardado y verás el resumen completo abajo
+    💾 Al hacer clic, tu tiempo será guardado y verás el resumen completo abajo. Toma ScreenShot del informe y adjuntalo en tu bitácora.
   </p>
 </div>
 
