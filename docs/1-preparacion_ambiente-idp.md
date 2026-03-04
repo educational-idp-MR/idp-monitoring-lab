@@ -15,31 +15,26 @@
 
 ---
 
-## 📦 Obtención de Código Fuente
+## 📦 Inicio de sesión
 
 > **Paso 1:**   Acceso a backstage
 
 1. Accede a la siguiente url: [backstage.eci-idp.click](https://backstage.eci-idp.click/)
-2. Selecciona la opción `Sign In` y posteriormente `Register`
+2. Selecciona la opción `Sign In` y posteriormente usa el usuario `student` y contraseña `student`.
 ![alt text](./resources/provisioning/register.png)
-3. Registrate usando usuario, contraseña y correo, utiliza tu usuario de enlace para identificarte, ejemplo `juan.perez-p`. 
-
-
-![alt text](./resources/provisioning/formulario.png)
 
 ---
 
 
 ## ☁️ Creación de aplicación base
-1. Una vez esté registrado en backstage y haya iniciado sesión, Acceda a la sección create
-2. Desde la sección create, en la tarjeta con nombre `Java Spring boot app with prometheus and loki integration` seleccione la opción choose
-3. Siga los pasos del formulario, para el nombre de la aplicación utilice como prefijo su nombre de enlace reemplazando los caracteres de `.` por `-`. Por ejemplo `juan-perez-p-application`.
-
-Tu profesor te va a proporcionar un nombre de stack, usalo en el paso 2 del formulario.
-
-No olvides añadir tu usuario de Github a la lista de colaboradores!
+1. Una vez en backstage, Accede a la sección create
+2. En la tarjeta con nombre `Java Spring boot app with prometheus and loki integration` selecciona la opción `choose`
 
 ![alt text](./resources/provisioning/selectCard1.png)
+
+3. Sigue los pasos del formulario. Para el nombre de la aplicación utiliza como prefijo tu usuario de enlace reemplazando los caracteres de `.` por `-`. Por ejemplo `juan-perez-p-app`.
+
+No olvides añadir tu usuario de Github a la lista de colaboradores!
 
 ![alt text](./resources/provisioning/form1.png)
 
@@ -47,7 +42,8 @@ No olvides añadir tu usuario de Github a la lista de colaboradores!
 
 ![alt text](./resources/provisioning/form3.png)
 
-4. Revisa los destalles que diligenciaste y presiona el boton `create`
+4. Revisa los detalles que diligenciaste y presiona el boton `create`
+
 ![alt text](./resources/provisioning/form4.png)
 
 5. Al finalizar el proceso recibiras el enlace de github donde se ha creado la aplicación. Para poder escribir código sobre este repositorio, revisa las notificaciones de tu cuenta de github y aprueba la invitación a participar.
