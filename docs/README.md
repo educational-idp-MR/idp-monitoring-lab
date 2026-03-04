@@ -45,13 +45,6 @@ Adicionalmente, el profesor del laboratorio disponibiliza 3 componentes:
 
 Tanto Grafana como las aplicaciones de los estudiantes pueden accederse mediante un balanceador de carga que distribuye las peticiones a las aplicaciones correspondientes según el subdominio asignado.
 
-**Stack Tecnológico:**
-- **Aplicación:** Java Spring Boot (URL Shortener)
-- **Métricas:** Prometheus + Spring Boot Actuator
-- **Logs:** Loki + Promtail
-- **Visualización:** Grafana
-- **Infraestructura:** Kubernetes (AWS EKS) + ArgoCD + Github Actions
-
 ---
 
 ## Tips para desarrollar el laboratorio

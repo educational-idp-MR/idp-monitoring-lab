@@ -245,7 +245,7 @@ Esta variable permitirá filtrar dinámicamente el nivel de logs visualizado des
 {app="{nombre-de-tu-app}-monitoring"} | level =~ `$LogLevel`
 ```
 
-#### Interpretación de la consulta:**
+#### Interpretación de la consulta:
 
 Muestra todos los logs generados por el contenedor tu aplicacion, filtrando dinámicamente según el nivel seleccionado en $LogLevel.
 

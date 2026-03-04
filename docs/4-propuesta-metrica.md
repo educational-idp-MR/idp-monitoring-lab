@@ -78,7 +78,8 @@ Cuando termines, despliegua la aplicación. Para esto debes:
 ![alt text](./resources/metrica-propia/release-2.png)
 ![alt text](./resources/metrica-propia/release-3.png)
 
-La creación del tag activará el proceso de despliegue, debes estar atento en backstage a cuanto se actualice el tiempo de sincronización (pase a ser reciente) y esté nuevamente en estado   `Synced` y `Healthy`, verifica que tu métrica aparece en: `http://{app-DNS}/actuator/prometheus`.
+La creación del tag activará el proceso de despliegue (puedes ver la primera parte en GH Actions y el estado de tu aplicación en tu app de backstage ), debes estar atento en backstage a la seccion `ArgoCD Overview` cuando se actualice el tiempo de sincronización (pase a ser reciente) y esté nuevamente en estado   `Synced` y `Healthy`, verifica que tu métrica aparece en: `http://{app-DNS}/actuator/prometheus`.
+
 ---
 
 ### 2.2.4 Define Cómo la Visualizarías en Grafana
