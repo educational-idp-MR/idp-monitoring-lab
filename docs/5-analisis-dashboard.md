@@ -179,10 +179,6 @@ No necesitas explicaciones profundas — basta con registrar qué observaste y p
 
 ---
 
-[⬅️ Anterior: Etapa 2.2](./4-propuesta-metrica.md) | [🏠 Volver al Inicio](./main.md)
-
----
-
 <div class="finish-stage-container">
   <button id="finish-stage-btn" class="finish-stage-btn" data-next-url="">
     🏆 Finalizar Laboratorio✅

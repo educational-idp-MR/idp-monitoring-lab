@@ -145,8 +145,6 @@ Incluye una captura de pantalla del panel en tu bitácora.
 
 Con tu métrica personalizada implementada y visualizada, es momento de analizar el comportamiento del sistema y detectar anomalías.
 
-### ➡️ [Continuar a la Etapa 3: Experimentación y Análisis](./5-analisis-dashboard.md)
-
 ---
 
 <div class="finish-stage-container">
@@ -159,9 +157,3 @@ Con tu métrica personalizada implementada y visualizada, es momento de analizar
 </div>
 
 ---
-
-<div align="center">
-
-[⬅️ Anterior: Etapa 2.1](./3-grafana-dashboard-base.md) | [🏠 Inicio](./README.md) | [➡️ Siguiente: Etapa 3](./5-analisis-dashboard.md)
-
-</div>

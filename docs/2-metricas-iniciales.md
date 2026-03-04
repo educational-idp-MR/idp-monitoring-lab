@@ -117,8 +117,6 @@ En la imagen se resaltan los distintos elementos que expone prometheus sobre cad
 
 Ahora que comprendes las métricas que expone la aplicación, es momento de visualizarlas en Grafana.
 
-### ➡️ [Continuar a la Etapa 2.1: Dashboard Base en Grafana](./3-grafana-dashboard-base.md)
-
 ---
 
 <div class="finish-stage-container">
@@ -131,9 +129,3 @@ Ahora que comprendes las métricas que expone la aplicación, es momento de visu
 </div>
 
 ---
-
-<div align="center">
-
-[⬅️ Anterior: Etapa 1](./1-preparacion_ambiente-idp.md) | [🏠 Inicio](./README.md) | [➡️ Siguiente: Etapa 2.1](./3-grafana-dashboard-base.md)
-
-</div>
