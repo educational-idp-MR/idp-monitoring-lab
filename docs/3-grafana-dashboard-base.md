@@ -27,7 +27,7 @@ Construir un dashboard en Grafana que permita visualizar y analizar las métrica
 
 ### 1️⃣ Acceso a Grafana
 
-1. Ingresa a la interfaz web de Grafana, para esto, desde backstage busca la aplicación base que te entregó el profesor.  Allí encontrarás la url del servicio de Grafana, tal como se muestra en las siguientes imagenes
+1. Ingresa a la interfaz web de Grafana, para esto, desde backstage busca la aplicación `obs-stack`. Allí encontrarás la url del servicio de Grafana, tal como se muestra en las siguientes imagenes
 ![alt text](./resources/grafana-inicial/profesorstack.png)
 
 ![alt text](./resources/grafana-inicial/grafanaurl.png)
